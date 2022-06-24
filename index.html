@@ -6,10 +6,154 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        * {
+            color: white;
+        }
+
+        .flex {
+            display: flex
+        }
+
+        section {
+            color: black;
+        }
+
+        .one-third {
+            flex-basis: calc(100% / 3 - 10px);
+        }
+
+        .flex-basis-content {
+            flex-basis: content;
+        }
+
+        .width100p {
+            width: 100vw;
+        }
+
+        .width200px {
+            width: 200px
+        }
+
+        .width170px {
+            width: 170px
+        }
+
+        .width-thicc {
+            width: 75%;
+        }
+
+        .width-thin {
+            width: 25%;
+        }
+
+        .height-article {
+            height: 700px;
+        }
+
+        .height-tall {
+            height: 650px;
+        }
+
+        .height-greens {
+            height: 100px;
+        }
+
+        .height-60px {
+            height: 60px;
+        }
+
+        .bg-blue {
+            background-color: blue;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-dark-red {
+            background-color: darkred;
+        }
+
+        .bg-green {
+            background-color: green;
+        }
+
+        .bg-yellow {
+            background-color: yellow;
+        }
+
+        .bg-purple {
+            background-color: purple;
+        }
+
+        .bg-blue:hover {
+            background-color: lightblue;
+        }
+
+        .margin-thin {
+            margin: 5px;
+        }
+
+        .top-padding {
+            padding-top: 5px;
+        }
+
+        .padding {
+            padding: 10px;
+        }
+    </style>
+
+
 </head>
+<nav class="flex flex-row flex-nowrap ">
+    <a class="one-third text-center bg-blue text-decoration-none text-white padding  " href="">link1</a>
+    <a class="one-third text-center bg-blue text-decoration-none text-white padding " href="">link2</a>
+    <a class="one-third text-center bg-blue text-decoration-none text-white padding " href="">link3</a>
+</nav>
 
 <body>
-    <h1>hello!</h1>
+    <main class="flex flex-nowrap flex-row padding ">
+        <section class="bg-purple flex flex-row flex-wrap height-article width-thicc">
+            <div class=" one-third bg-yellow text-black margin-thin">div 1 Lorem ipsum dolor sit amet consectetur,
+                adipisicing elit. Possimus sunt sint, saepe in iste consectetur ipsum maiores assumenda eaque
+                accusantium culpa delectus, dolores ex placeat architecto ullam deserunt tenetur commodi? Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Accusantium maxime ab perferendis soluta porro, repellendus
+                quaerat tempora, cupiditate odit expedita quod vel nulla hic dolor id qui incidunt eaque consectetur!
+            </div>
+            <div class=" one-third bg-yellow text-black margin-thin">div 2</div>
+            <div class=" one-third bg-yellow text-black margin-thin">div 3</div>
+            <div class=" one-third bg-yellow text-black margin-thin">div 4</div>
+            <div class=" one-third bg-yellow text-black margin-thin">div 5</div>
+            <div class=" one-third bg-yellow text-black margin-thin">div 6</div>
+            <div class=" one-third bg-yellow text-black margin-thin">div 7</div>
+            <div class=" one-third bg-yellow text-black margin-thin">div 8</div>
+            <div class=" one-third bg-yellow text-black margin-thin">div 9</div>
+            <div class=" one-third bg-yellow text-black margin-thin">div 10</div>
+        </section>
+        <aside class="width-thin flex flex-column ">
+            <div class="bg-red flex flex-column bg-Red height-tall justify-content-evenly flex ">
+                <div class="bg-green height-greens margin-thin ">div 1</div>
+                <div class="bg-green height-greens margin-thin ">div 2</div>
+                <div class="bg-green height-greens margin-thin ">div 3</div>
+                <div class="bg-green height-greens margin-thin ">div 4</div>
+                <div class="bg-green height-greens margin-thin ">div 5</div>
+            </div>
+        </aside>
+
+    </main>
+    <Footer>
+
+        <div class="bg-dark-red height-60px text-center  ">
+            <p class="top-padding">THIS IS A FOOTER</p>
+        </div>
+    </Footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
 </body>
 
 </html>
