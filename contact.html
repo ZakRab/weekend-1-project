@@ -25,6 +25,10 @@
             color: black;
         }
 
+        .one-third-minus-margin {
+            flex-basis: calc(100% / 3 - 10px);
+        }
+
         .one-third {
             flex-basis: calc(100% / 3);
         }
@@ -97,8 +101,9 @@
             background-color: purple;
         }
 
-        .bg-blue:hover {
+        a:hover {
             background-color: lightblue;
+            color: black !important;
         }
 
         .margin-thin {
@@ -131,13 +136,14 @@
 
 </head>
 <nav class="row width100p margin0">
-    <a class="one-third text-center bg-blue text-decoration-none text-white padding  " href="">link1</a>
-    <a class="one-third text-center bg-blue text-decoration-none text-white padding " href="">link2</a>
-    <a class="one-third text-center bg-blue text-decoration-none text-white padding " href="">link3</a>
+    <a class="one-third text-center bg-blue text-decoration-none text-white padding  " href="">Main Page</a>
+    <a class="one-third text-center bg-blue text-decoration-none text-white padding " href="">For Sale</a>
+    <a class="one-third text-center bg-blue text-decoration-none text-white padding " href="">Contact Us</a>
 </nav>
 
 <body>
     <main class="flex">
+        <!-- <H3 class="text-center block">Contact Info</H3> -->
         <div class="flex margin-thicc bg-purple padding">
             <form class="row g-3 needs-validation" novalidate>
                 <div class="col-md-4">
@@ -205,6 +211,12 @@
                         <label class="form-check-label" for="inlineRadio3">Question</label>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Enter Message Here</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
                 <div class="col-12">
                     <div class="form-check ">
                         <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
@@ -219,6 +231,7 @@
                 <div class="col-12">
                     <button class="btn btn-primary" type="submit">Submit form</button>
                 </div>
+
             </form>
         </div>
 
