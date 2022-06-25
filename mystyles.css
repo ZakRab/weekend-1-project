@@ -1,0 +1,124 @@
+
+* {
+    color: white;
+}
+
+.flex {
+    display: flex
+}
+
+.block {
+    display: block;
+}
+
+section {
+    color: black;
+}
+
+.one-third-minus-margin {
+    flex-basis: calc(100% / 3 - 10px);
+}
+
+.one-third {
+    flex-basis: calc(100% / 3);
+}
+
+.flex-basis-content {
+    flex-basis: content;
+}
+
+.width100p {
+    width: 100%;
+}
+
+.width200px {
+    width: 200px
+}
+
+.width170px {
+    width: 170px
+}
+
+.width-thicc {
+    width: 75%;
+}
+
+.width-thin {
+    width: 25%;
+}
+
+.height-article {
+    height: 700px;
+}
+
+.height-tall {
+    height: 650px;
+}
+
+.height-greens {
+    height: 100px;
+}
+
+.height-60px {
+    height: 60px;
+}
+
+.margin-auto {
+    margin: auto;
+}
+
+.bg-blue {
+    background-color: blue;
+}
+
+.bg-red {
+    background-color: red;
+}
+
+.bg-dark-red {
+    background-color: darkred;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.bg-purple {
+    background-color: purple;
+}
+
+a:hover {
+    background-color: lightblue;
+    color: black !important;
+}
+
+
+.margin-thin {
+    margin: 5px;
+}
+
+.margin-thicc {
+    margin-right: 60px;
+    margin-left: 60px;
+}
+
+.margin0 {
+    margin: 0px !important;
+}
+
+.l-r-padding {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.top-padding {
+    padding-top: 5px;
+}
+
+.padding {
+    padding: 10px;
+}
