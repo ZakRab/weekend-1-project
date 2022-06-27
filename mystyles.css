@@ -84,10 +84,6 @@ footer{
     height: 60px;
 }
 
-.margin-auto {
-    margin: auto;
-}
-
 .bg-blue {
     background-color: blue;
 }
@@ -129,6 +125,10 @@ a:hover {
 }
 
 
+.margin-auto {
+    margin: auto;
+}
+
 .margin-thin {
     margin: 5px;
 }
@@ -148,7 +148,7 @@ a:hover {
 }
 
 .top-padding {
-    padding-top: 5px;
+    padding-top: 1px;
 }
 
 .padding {
@@ -157,7 +157,7 @@ a:hover {
 
 .for-sale-items:hover{
     transform: scale(110%);
-    transition: all;
+    transition:linear;
 }
 @media (max-width: 700px) {
     .for-sale-items{
@@ -172,5 +172,15 @@ a:hover {
 @media (max-width: 800px) {
     .width-thin{
         width: 100%;
+    }
+}
+@media (max-width: 1000px) {
+    .one-third-minus-margin{
+        flex-basis: calc(50% - 10px);   
+    }
+}
+@media (max-width: 700px) {
+    .one-third-minus-margin{
+        flex-basis: 100%
     }
 }
