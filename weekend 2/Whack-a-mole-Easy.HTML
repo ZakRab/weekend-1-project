@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack-a-mole</title>
+    <link rel="stylesheet" href="Whack-a-mole.css">
+</head>
+
+<body>
+    <H1 class="text-center">WHACK-A-MOLE</H1>
+    <header class="flex space-evenly">
+        <button href="file:///Users/zakrab/Desktop/Zak-repo/week-two/Whack-a-mole-Easy.HTML" id="button1"
+            class="inline margin-auto">Easy Mode</button>
+        <button href="file:///Users/zakrab/Desktop/Zak-repo/week-two/Whack-a-mole-medium.html" id="button2"
+            class="inline margin-auto">Medium Mode</button>
+        <button href="file:///Users/zakrab/Desktop/Zak-repo/week-two/Whack-a-mole-hard.html" id="button3"
+            class="inline margin-auto">Hard Mode</button>
+    </header>
+    <button id="startButton" href="#main" class="bg-yellow margin-auto block">Start Game</button>
+    <h2 class="text-center">Your score is <span id="moleCounter"></span></h2>
+    <main id="main" class="flex flex-row-wrap tmargin rlmargin">
+        <div id="startTimer" class="block bg-yellow fixed countDown margin-center text-center font-large "> 3 </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+        <div class="red-square">
+            <div class="black-circle"></div>
+        </div>
+    </main>
+
+    <script>
+        let holesArr = document.getElementsByClassName("black-circle")
+        let button1 = document.getElementById("button1")
+        let button3 = document.getElementById("button3")
+        let button2 = document.getElementById("button2")
+        let startButton = document.getElementById("startButton")
+        let startTimerBox = document.getElementById("startTimer")
+        let startTime = 3
+        let moleCounterText = document.getElementById("moleCounter")
+        startButton.addEventListener("click", function () {
+            moleCounterText.innerText = 0
+            setInterval(() => {
+                let countdown = setTimeout(() => {
+                    startTimerBox.style.opacity = 0
+                }, 3000);
+                startTimerBox.innerText = startTime;
+                startTime--
+                startTimerBox.innerText = startTime;
+            }, 1000);
+            setTimeout(() => {
+                let moles = setInterval(() => {
+                    setTimeout(() => {
+                        let rand = Math.floor(Math.random() * 24) + 1
+                        holesArr[rand].classList.add("bg-yellow")
+                        setTimeout(() => {
+                            holesArr[rand].classList.remove("bg-yellow")
+                            setTimeout(() => {
+                                clearInterval(moles)
+                            }, 20000);
+                        }, 1000);
+
+                    }, 1000);
+
+                }, 2000);
+
+            }, 2000);
+        })
+        let moleCounter = 0
+        for (let i = 0; i < holesArr.length; i++) {
+            holes = holesArr[i]
+            holes.addEventListener("click", function (e) {
+                console.log(e.target);
+                if (e.target.classList.contains("bg-yellow")) {
+                    moleCounter++
+                    moleCounterText.innerText = moleCounter
+                    e.target.classList.remove("bg-yellow")
+                    e.target.classList.add("pow")
+
+                }
+                console.log(moleCounter);
+
+            })
+        }
+
+    </script>
+</body>
+
+</html>
